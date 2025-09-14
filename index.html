@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saptansu Neogi | AI, Analytics & Strategy</title>
+  <meta name="description" content="Portfolio of Saptansu Neogi — Analytics, Supply Chain Strategy, Sustainability. MSc Business Analytics (Warwick)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b1020; --card:#11162a; --muted:#93a4bd; --text:#e6eefc; --accent:#60a5fa; --pill:#0ea5e9; --border:rgba(148,163,184,.15); }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, rgba(96,165,250,0.15), transparent),
+                  radial-gradient(900px 500px at -10% 20%, rgba(14,165,233,0.12), transparent), var(--bg); }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .wrap{ max-width:1200px; margin:0 auto; padding:24px }
+
+    /* ===== Top Nav ===== */
+    header{ position:sticky; top:0; z-index:50; backdrop-filter:blur(8px);
+      background:linear-gradient(to bottom, rgba(11,16,32,.9), rgba(11,16,32,.6) 60%, transparent);
+      border-bottom:1px solid var(--border); }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 24px; max-width:1200px; margin:0 auto }
+    .brand{ font-weight:900; letter-spacing:.4px; color:#fff }
+    .links{ display:flex; gap:18px; flex-wrap:wrap }
+    .links a{ color:var(--muted); font-weight:600 }
+    .links a:hover{ color:var(--text) }
+
+    section{ padding:52px 0 }
+    h2{ font-size:22px; margin:0 0 18px; letter-spacing:.5px }
+
+    /* ===== HERO (image left, text right) ===== */
+    .hero{ display:flex; align-items:center; gap:40px; flex-wrap:wrap; min-height:88vh }
+    .hero .profile-photo{ width:360px; height:360px; border-radius:20px; object-fit:cover; box-shadow:0 20px 50px rgba(0,0,0,.5) }
+    .hero-text{ flex:1; min-width:300px; display:flex; flex-direction:column }
+    .hero-name{ font-size:clamp(40px,6vw,68px); font-weight:900; margin:0 0 12px; color:#fff }
+    .hero-tagline{ font-size:20px; color:var(--muted); margin:0 0 18px }
+    .hero-summary{ font-size:18px; line-height:1.65; margin:0 0 20px }
+    .hero-skills{ display:flex; flex-wrap:wrap; gap:10px; margin:8px 0 24px }
+    .pill{ display:inline-block; padding:8px 12px; border-radius:999px; font-size:12px; font-weight:800; letter-spacing:.3px; background:rgba(14,165,233,.12); color:#7dd3fc; border:1px solid rgba(14,165,233,.35) }
+    .hero-buttons{ display:flex; gap:14px; flex-wrap:wrap; margin-top:auto }
+    .btn{ padding:14px 24px; border-radius:12px; font-weight:800; font-size:14px; transition:all .25s ease; border:1px solid rgba(255,255,255,.15) }
+    .btn-primary{ background:linear-gradient(135deg,#2563eb,#0ea5e9); color:#fff; border:none; box-shadow:0 10px 25px rgba(37,99,235,.28) }
+    .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(37,99,235,.36) }
+    .btn-secondary{ background:rgba(255,255,255,0.08); color:var(--text) }
+    .btn-secondary:hover{ background:rgba(255,255,255,0.15) }
+
+    @media(max-width:860px){ .hero .profile-photo{ width:300px; height:300px } }
+
+    /* ===== Card base ===== */
+    .grid{ display:grid; gap:16px }
+    .cards{ grid-template-columns:repeat(auto-fit,minmax(260px,1fr)) }
+    .card{ background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:16px; padding:16px; transition:transform .2s ease, box-shadow .2s ease }
+    .card:hover{ transform:translateY(-2px); box-shadow:0 10px 30px rgba(2,6,23,.5) }
+
+    /* ===== Menu-style list with image (Roadmap & Projects) ===== */
+    .menu-list{ display:grid; gap:16px; max-width:1000px; margin:0 auto }
+    .menu-item{ display:flex; align-items:center; gap:16px; padding:16px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02)) }
+    .menu-item img{ width:120px; height:120px; object-fit:cover; border-radius:12px; flex-shrink:0 }
+    .menu-item h3{ margin:0 0 8px; color:#fff }
+    .menu-item p{ margin:0; color:var(--muted) }
+    .menu-item .stack{ margin-top:8px }
+
+    /* ===== Skills ===== */
+    .skill-card{ border-radius:20px; padding:20px }
+
+    footer{ border-top:1px solid var(--border); padding:28px 0 60px; color:var(--muted); font-size:14px; text-align:center }
+  </style>
+</head>
+<body>
+  <!-- ===== Top Navigation ===== -->
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home">Saptansu Neogi</a>
+      <div class="links">
+        <a href="#intro">What I Do</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- ===== 1) HERO ===== -->
+    <section id="home" class="hero">
+      <img class="profile-photo" src="assets/images/saptansu.jpg" alt="Saptansu Neogi">
+      <div class="hero-text">
+        <h1 class="hero-name">Saptansu Neogi</h1>
+        <p class="hero-tagline">Data Analytics • Supply Chain Strategy • Sustainability</p>
+        <p class="hero-summary">MSc Business Analytics (Warwick). 2+ years in global supply chain at Novartis. I turn messy, multi‑source data into clear narratives and pragmatic tools — from KPI frameworks and automated pipelines to assurance‑ready sustainability reporting at scale.</p>
+        <div class="hero-skills">
+          <span class="pill">Power BI (DAX)</span><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Tableau</span><span class="pill">Alteryx</span><span class="pill">Looker</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects →</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch ✉</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2) WHAT I DO ===== -->
+    <section id="intro">
+      <h2>What I do</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Supply Chain Analytics</h3>
+          <p>Forecasting, inventory, and KPI design that reduce stockouts and waste. ETL and data quality baked‑in.</p>
+          <div class="hero-skills" style="margin-top:10px"><span class="pill">S&OP</span><span class="pill">SAP data</span><span class="pill">Lead‑time</span><span class="pill">Visual KPIs</span></div>
+        </article>
+        <article class="card">
+          <h3>Sustainability & ESG</h3>
+          <p>GHG Scope 1–3 reporting, audit‑ready data pipelines, and governance. Net Zero roadmaps grounded in operations.</p>
+          <div class="hero-skills" style="margin-top:10px"><span class="pill">Scope 1–3</span><span class="pill">Data governance</span><span class="pill">Assurance</span></div>
+        </article>
+        <article class="card">
+          <h3>Decision Products</h3>
+          <p>Dashboards and tools that make good decisions obvious. Storytelling, design systems, and stakeholder alignment.</p>
+          <div class="hero-skills" style="margin-top:10px"><span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">Streamlit</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 3) ABOUT — Roadmap as menu-card list with images ===== -->
+    <section id="about">
+      <h2>About — My Learning Roadmap</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <img src="assets/images/cs.jpg" alt="Computer Science">
+          <div>
+            <h3>First Pass: Computer Science</h3>
+            <p>Learned to think like a builder — hardware bits, software stacks, and a habit of continuous learning.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/int.jpg" alt="Internships">
+          <div>
+            <h3>Feature Engineering: Internships</h3>
+            <p>ITC (manufacturing), HighRadius (fintech), Novartis (supply chain). Different sectors, same goal: find the signal in the noise.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/novartis.jpg" alt="Novartis">
+          <div>
+            <h3>Training the Model: Novartis</h3>
+            <p>2 years in Global Supply Chain: automated Alteryx/SQL workflows, KPI dashboards, and sustainability analytics for 800+ vendors.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/msc.jpg" alt="Warwick MSc">
+          <div>
+            <h3>Re‑train: Warwick MSc</h3>
+            <p>Shifted from cool tech to business outcomes. Built models for optimisation, supply chain analytics, and statistics.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/wmg.jpg" alt="WMG">
+          <div>
+            <h3>Leading Change: WMG</h3>
+            <p>Team lead for GHG inventory & reporting; cut data‑gathering time ~40%, improved integrity ~25%, and set up a repeatable reporting cycle.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/learning.jpg" alt="Continuous Learning">
+          <div>
+            <h3>Continuous Learning</h3>
+            <p>I treat my career like an always‑on training loop — continually fine‑tuning skills and exploring new ones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4) PROJECTS — menu-card style with images ===== -->
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <img src="assets/images/project_hospital.jpg" alt="Hospital accessibility model">
+          <div>
+            <h3>Hospital Accessibility Scenario Model</h3>
+            <p class="muted">2025 • MSc Dissertation</p>
+            <p>Interactive Python/Streamlit model linking car‑park congestion to missed appointments and emissions; informs NHS Midlands planning.</p>
+            <div class="stack"><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Streamlit</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/project_kpi.jpg" alt="Supplier sustainability platform">
+          <div>
+            <h3>Supplier Sustainability & KPI Platform</h3>
+            <p class="muted">2024 • Novartis</p>
+            <p>Power BI + Alteryx toolkit to assess 800+ vendors against sustainability KPIs; accelerated contract reviews and reduced turnaround times.</p>
+            <div class="stack"><span class="pill">Power BI</span><span class="pill">Alteryx</span><span class="pill">SQL</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="assets/images/project_covid.jpg" alt="Agent-based COVID simulation">
+          <div>
+            <h3>Agent‑Based COVID‑19 Simulation</h3>
+            <p class="muted">2021 • Academic</p>
+            <p>Python MESA model with demographics and behaviour; explored mobility, vaccination and PPE policy impacts.</p>
+            <div class="stack"><span class="pill">Python</span><span class="pill">MESA</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5) SKILLS & CERTIFICATIONS ===== -->
+    <section id="skills">
+      <h2>Skills & Certifications</h2>
+      <div class="grid cards">
+        <div class="card skill-card">
+          <h3>Data & BI</h3>
+          <div class="hero-skills"><span class="pill">Power BI (DAX)</span><span class="pill">Tableau</span><span class="pill">Looker</span><span class="pill">Qlik Sense</span><span class="pill">Alteryx</span><span class="pill">Excel (Power Query)</span><span class="pill">Data Modelling</span><span class="pill">Data Visualization</span></div>
+        </div>
+        <div class="card skill-card">
+          <h3>Analytics & Engineering</h3>
+          <div class="hero-skills"><span class="pill">Python (Pandas, NumPy, Plotly, scikit‑learn)</span><span class="pill">R</span><span class="pill">SQL</span><span class="pill">Azure</span><span class="pill">GCP</span><span class="pill">Streamlit</span><span class="pill">Git / GitHub</span><span class="pill">Optimisation (OR‑Tools, PuLP)</span><span class="pill">A/B testing & Inference</span></div>
+        </div>
+        <div class="card skill-card">
+          <h3>Domains</h3>
+          <div class="hero-skills"><span class="pill">Supply Chain</span><span class="pill">Sustainability / ESG</span><span class="pill">Operations & Strategy</span><span class="pill">Data Governance</span><span class="pill">Forecasting</span><span class="pill">KPI Design</span><span class="pill">Dashboard Storytelling</span></div>
+        </div>
+      </div>
+      <div class="card skill-card" style="margin-top:16px">
+        <h3>Certifications</h3>
+        <div class="hero-skills"><span class="pill">Alteryx Designer Core</span><span class="pill">Microsoft Azure</span><span class="pill">Google Cloud Platform</span><span class="pill">IBM Data Analyst</span><span class="pill">CSCMP Demand Planning</span><span class="pill">McKinsey Forward Program</span></div>
+      </div>
+    </section>
+
+    <!-- ===== 6) CONTACT ===== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Based in Solihull, UK. Open to roles across the UK and Europe.</p>
+        <p><strong>Email:</strong> <a href="mailto:neogisanj@gmail.com">neogisanj@gmail.com</a> &nbsp;•&nbsp; <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjananeogi" target="_blank" rel="noreferrer">sanjananeogi</a> &nbsp;•&nbsp; <strong>Phone:</strong> 07503 239328</p>
+      </div>
+    </section>
+
+    <!-- CV button anchored at the bottom of main content -->
+    <div style="text-align:center; margin:32px 0 12px;">
+      <a class="btn btn-secondary" href="assets/Saptansu_Neogi_CV.pdf" download>Download CV (PDF) ↓</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Saptansu Neogi • Built for GitHub Pages</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scroll for top nav
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{ const id=a.getAttribute('href'); if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); } });
+    });
+  </script>
+</body>
+</html>
