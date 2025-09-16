@@ -4,69 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Saptansu Neogi | Finance & Strategy</title>
-  <meta name="description" content="Portfolio of Saptansu Neogi — Analytics, Supply Chain Strategy, Sustainability. MSc Business Analytics (Warwick)." />
+  <meta name="description" content="Portfolio of Saptansu Neogi — Analytics, Strategy & Finance. BSc Economics (Hons)." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0b1020; --card:#11162a; --muted:#93a4bd; --text:#e6eefc; --accent:#60a5fa; --pill:#0ea5e9; --border:rgba(148,163,184,.15); }
+    :root{--bg:#0b1020;--card:#11162a;--muted:#93a4bd;--text:#e6eefc;--accent:#60a5fa;--pill:#0ea5e9;--border:rgba(148,163,184,.15)}
     *{box-sizing:border-box}
-    body{ margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text);
-      background: radial-gradient(1200px 600px at 70% -10%, rgba(96,165,250,0.15), transparent),
-                  radial-gradient(900px 500px at -10% 20%, rgba(14,165,233,0.12), transparent), var(--bg); }
-    a{ color:var(--accent); text-decoration:none }
-    a:hover{ text-decoration:underline }
-    .wrap{ max-width:1200px; margin:0 auto; padding:24px }
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);
+      background:radial-gradient(1200px 600px at 70% -10%, rgba(96,165,250,.15), transparent),
+                 radial-gradient(900px 500px at -10% 20%, rgba(14,165,233,.12), transparent),var(--bg)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
 
     /* ===== Top Nav ===== */
-    header{ position:sticky; top:0; z-index:50; backdrop-filter:blur(8px);
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);
       background:linear-gradient(to bottom, rgba(11,16,32,.9), rgba(11,16,32,.6) 60%, transparent);
-      border-bottom:1px solid var(--border); }
-    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 24px; max-width:1200px; margin:0 auto }
-    .brand{ font-weight:900; letter-spacing:.4px; color:#fff }
-    .links{ display:flex; gap:18px; flex-wrap:wrap }
-    .links a{ color:var(--muted); font-weight:600 }
-    .links a:hover{ color:var(--text) }
+      border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;max-width:1200px;margin:0 auto}
+    .brand{font-weight:900;letter-spacing:.4px;color:#fff}
+    .links{display:flex;gap:18px;flex-wrap:wrap}
+    .links a{color:var(--muted);font-weight:600}
+    .links a:hover{color:var(--text)}
 
-    section{ padding:52px 0 }
-    h2{ font-size:22px; margin:0 0 18px; letter-spacing:.5px }
+    section{padding:52px 0}
+    h2{font-size:22px;margin:0 0 18px;letter-spacing:.5px}
 
     /* ===== HERO (image left, text right) ===== */
-    .hero{ display:flex; align-items:center; gap:40px; flex-wrap:wrap; min-height:88vh }
-    .hero .profile-photo{ width:360px; height:360px; border-radius:20px; object-fit:cover; box-shadow:0 20px 50px rgba(0,0,0,.5) }
-    .hero-text{ flex:1; min-width:300px; display:flex; flex-direction:column }
-    .hero-name{ font-size:clamp(40px,6vw,68px); font-weight:900; margin:0 0 12px; color:#fff }
-    .hero-tagline{ font-size:20px; color:var(--muted); margin:0 0 18px }
-    .hero-summary{ font-size:18px; line-height:1.65; margin:0 0 20px }
-    .hero-skills{ display:flex; flex-wrap:wrap; gap:10px; margin:8px 0 24px }
-    .pill{ display:inline-block; padding:8px 12px; border-radius:999px; font-size:12px; font-weight:800; letter-spacing:.3px; background:rgba(14,165,233,.12); color:#7dd3fc; border:1px solid rgba(14,165,233,.35) }
-    .hero-buttons{ display:flex; gap:14px; flex-wrap:wrap; margin-top:auto }
-    .btn{ padding:14px 24px; border-radius:12px; font-weight:800; font-size:14px; transition:all .25s ease; border:1px solid rgba(255,255,255,.15) }
-    .btn-primary{ background:linear-gradient(135deg,#2563eb,#0ea5e9); color:#fff; border:none; box-shadow:0 10px 25px rgba(37,99,235,.28) }
-    .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(37,99,235,.36) }
-    .btn-secondary{ background:rgba(255,255,255,0.08); color:var(--text) }
-    .btn-secondary:hover{ background:rgba(255,255,255,0.15) }
-
-    @media(max-width:860px){ .hero .profile-photo{ width:300px; height:300px } }
+    .hero{display:flex;align-items:center;gap:40px;flex-wrap:wrap;min-height:88vh}
+    .hero .profile-photo{width:360px;height:360px;border-radius:50%;object-fit:cover;
+      border:4px solid rgba(96,165,250,.45);background:#0f172a;box-shadow:0 24px 60px rgba(2,6,23,.55),0 0 0 6px rgba(96,165,250,.08)}
+    .hero-text{flex:1;min-width:300px;display:flex;flex-direction:column}
+    .hero-name{font-size:clamp(40px,6vw,68px);font-weight:900;margin:0 0 12px;color:#fff}
+    .hero-tagline{font-size:20px;color:var(--muted);margin:0 0 12px}
+    .hero-skills{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 18px}
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.3px;background:rgba(96,165,250,.14);color:#dbeafe;border:1px solid rgba(96,165,250,.4)}
+    .hero-summary{font-size:18px;line-height:1.65;margin:0 0 20px}
+    .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto}
+    .btn{padding:14px 24px;border-radius:12px;font-weight:800;font-size:14px;transition:all .25s ease;border:1px solid rgba(255,255,255,.15)}
+    .btn-primary{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;border:none;box-shadow:0 10px 25px rgba(37,99,235,.28)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,99,235,.36)}
+    .btn-secondary{background:rgba(255,255,255,.08);color:var(--text)}
+    .btn-secondary:hover{background:rgba(255,255,255,.15)}
+    @media(max-width:860px){.hero .profile-photo{width:300px;height:300px}}
 
     /* ===== Card base ===== */
-    .grid{ display:grid; gap:16px }
-    .cards{ grid-template-columns:repeat(auto-fit,minmax(260px,1fr)) }
-    .card{ background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:16px; padding:16px; transition:transform .2s ease, box-shadow .2s ease }
-    .card:hover{ transform:translateY(-2px); box-shadow:0 10px 30px rgba(2,6,23,.5) }
+    .grid{display:grid;gap:16px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;padding:16px;transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(2,6,23,.5)}
 
     /* ===== Menu-style list with image (Roadmap & Projects) ===== */
-    .menu-list{ display:grid; gap:20px; max-width:1000px; margin:0 auto }
-    .menu-item{ display:flex; align-items:center; gap:16px; padding:16px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02)) }
-    .menu-item img{ width:120px; height:120px; object-fit:cover; border-radius:12px; flex-shrink:0 }
-    .menu-item h3{ margin:0 0 8px; color:#fff }
-    .menu-item p{ margin:0; color:var(--muted) }
-    .menu-item .stack{ margin-top:8px }
+    .menu-list{display:grid;gap:40px;max-width:1000px;margin:0 auto}
+    .menu-item{display:flex;align-items:center;gap:16px;padding:16px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02))}
+    .menu-item img{width:120px;height:120px;object-fit:cover;border-radius:12px;flex-shrink:0}
+    .menu-item h3{margin:0 0 8px;color:#fff}
+    .menu-item p{margin:0;color:var(--muted)}
+    .menu-item .stack{margin-top:8px}
+
+    /* Dotted arrow connectors for Roadmap */
+    .roadmap-connector{display:flex;align-items:center;justify-content:center;height:56px;pointer-events:none}
+    .roadmap-connector svg{width:24px;height:56px;opacity:.9}
 
     /* ===== Skills ===== */
-    .skill-card{ border-radius:20px; padding:20px }
+    .skill-card{border-radius:20px;padding:20px}
 
-    footer{ border-top:1px solid var(--border); padding:28px 0 60px; color:var(--muted); font-size:14px; text-align:center }
+    footer{border-top:1px solid var(--border);padding:28px 0 60px;color:var(--muted);font-size:14px;text-align:center}
   </style>
 </head>
 <body>
@@ -90,12 +94,11 @@
       <img class="profile-photo" src="assets/images/saptansu.jpg" alt="Saptansu Neogi">
       <div class="hero-text">
         <h1 class="hero-name">Saptansu Neogi</h1>
-        <p class="hero-tagline">Data Analytics • Strategy • Finance • BSc Economics (Hons) </p>
-        <p class="hero-summary">From one track to many - I chose finance to turn hard problems into clean decisions.
-I grew up believing science was the only path. Relocating to the UK exposed me to a broader field of ideas—finance, analytics, and economics—which I’ve since channelled into building decision-ready reporting that supports better business decisions. 
+        <p class="hero-tagline">Data Analytics • Strategy • Finance • BSc Economics (Hons)</p>
         <div class="hero-skills">
           <span class="pill">Power BI (DAX)</span><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Excel (Power Query)</span><span class="pill">Financial Modelling</span><span class="pill">Looker</span>
         </div>
+        <p class="hero-summary">From one track to many — I chose finance to turn hard problems into clean decisions. I grew up believing science was the only path. Relocating to the UK exposed me to a broader field of ideas — finance, analytics, and economics — which I’ve channelled into building decision‑ready reporting that supports better business decisions.</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View Projects →</a>
           <a href="#contact" class="btn btn-secondary">Get in Touch ✉</a>
@@ -109,72 +112,117 @@ I grew up believing science was the only path. Relocating to the UK exposed me t
       <div class="grid cards">
         <article class="card">
           <h3>Financial Analytics</h3>
-          <p>I specialise in financial analytics—turning complex, multi-system data into clear, decision-ready insights. From month-end packs to M&A valuations, I bring accuracy, speed and structure to reporting that executives can trust.</p>
+          <p>I specialise in financial analytics — turning complex, multi‑system data into clear, decision‑ready insights. From month‑end packs to M&A valuations, I bring accuracy, speed and structure to reporting that executives can trust.</p>
           <div class="hero-skills" style="margin-top:10px"><span class="pill">Forecasting</span><span class="pill">SAP data</span><span class="pill">Power BI & Excel</span><span class="pill">SMART KPIs</span></div>
         </article>
         <article class="card">
           <h3>Financial Modelling</h3>
-          <p>I design and stress-test models that bring clarity to valuation, forecasting, and capital-structure choices—helping decision makers see the financial impact before committing.</p>
+          <p>I design and stress‑test models that bring clarity to valuation, forecasting, and capital‑structure choices — helping decision makers see the financial impact before committing.</p>
           <div class="hero-skills" style="margin-top:10px"><span class="pill">DCF</span><span class="pill">Comparable Company Analysis</span><span class="pill">Capital Structure Optimisation</span><span class="pill">Scenario & Sensitivity Analysis</span></div>
         </article>
         <article class="card">
           <h3>Decision Products</h3>
-          <p>I turn raw data into decision products—dashboards, packs, and models—that cut through complexity and give leaders confidence to act quickly.</p>
-          <div class="hero-skills" style="margin-top:10px"><span class="pill">Power BI</span><span class="pill">Excel</span><span class="pill">Executive-ready Visualisation</span></div>
+          <p>I turn raw data into decision products — dashboards, packs, and models — that cut through complexity and give leaders confidence to act quickly.</p>
+          <div class="hero-skills" style="margin-top:10px"><span class="pill">Power BI</span><span class="pill">Excel</span><span class="pill">Executive‑ready Visualisation</span></div>
         </article>
       </div>
     </section>
 
-    <!-- ===== 3) ABOUT — Roadmap as menu-card list with images ===== -->
+    <!-- ===== 3) ABOUT — Roadmap as menu-card list with images + dotted arrows ===== -->
     <section id="about">
       <h2>About — My Learning Journey</h2>
       <div class="menu-list">
+        <!-- Card 1 -->
         <div class="menu-item">
-          <img src="assets/images/cs.jpg" alt="Computer Science">
+          <img src="assets/images/cs.jpg" alt="Foundations">
           <div>
             <h3>Foundations — apron on (basics & protection)</h3>
-            <p>Sixteen years in India shaped my work ethic; the UK broadened my options. I sampled subjects, found I genuinely liked economics, and took Economics, Maths, Physics at A-level. Now I’m studying B.Sc. Economics at the University of Birmingham, turning analysis into action.</p>
+            <p>Sixteen years in India shaped my work ethic; the UK broadened my options. I sampled subjects, found I genuinely liked economics, and took Economics, Maths, Physics at A‑level. Now I’m studying B.Sc. Economics at the University of Birmingham, turning analysis into action.</p>
           </div>
         </div>
+        <div class="roadmap-connector" aria-hidden="true">
+          <svg viewBox="0 0 24 56" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow-dn" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#60a5fa"/></marker>
+            </defs>
+            <line x1="12" y1="0" x2="12" y2="48" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 6" marker-end="url(#arrow-dn)"/>
+          </svg>
+        </div>
+
+        <!-- Card 2 -->
         <div class="menu-item">
-          <img src="assets/images/int.jpg" alt="Internships">
+          <img src="assets/images/int.jpg" alt="Early steps">
           <div>
             <h3>Early Steps — learning the grip (first practice)</h3>
-            <p>To get beyond theory, I joined the FinTech Society: a five-person team building Python strategies, back-testing across regimes, and presenting under scrutiny. It’s where data stopped being abstract and became something I could shape, explain, and defend.</p>
+            <p>To get beyond theory, I joined the FinTech Society: a five‑person team building Python strategies, back‑testing across regimes, and presenting under scrutiny. Data stopped being abstract and became something I could shape, explain, and defend.</p>
           </div>
         </div>
+        <div class="roadmap-connector" aria-hidden="true">
+          <svg viewBox="0 0 24 56" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow-dn2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#60a5fa"/></marker>
+            </defs>
+            <line x1="12" y1="0" x2="12" y2="48" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 6" marker-end="url(#arrow-dn2)"/>
+          </svg>
+        </div>
+
+        <!-- Card 3 -->
         <div class="menu-item">
-          <img src="assets/images/novartis.jpg" alt="Novartis">
+          <img src="assets/images/novartis.jpg" alt="Exploration">
           <div>
-            <h3>Exploration — sharpening the blade (real-world context)</h3>
-            <p>Student projects weren’t enough, so I completed J.P. Morgan & HSBC virtual experiences: screened 5 M&A targets, valued a £803M company with DCF & comps, stress-tested a 110.8% premium and 15% supply-chain risk, and read DCM conditions (early-2021 issuance ~66% BBB+/-). It sharpened my judgement on what stakeholders actually need in a model and a memo.</p>
+            <h3>Exploration — sharpening the blade (real‑world context)</h3>
+            <p>J.P. Morgan & HSBC virtual experiences: screened 5 M&A targets, valued a £803M company with DCF & comps, stress‑tested a 110.8% premium and 15% supply‑chain risk, and read DCM conditions. It sharpened my sense for what stakeholders actually need in a model and a memo.</p>
           </div>
         </div>
+        <div class="roadmap-connector" aria-hidden="true">
+          <svg viewBox="0 0 24 56" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow-dn3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#60a5fa"/></marker>
+            </defs>
+            <line x1="12" y1="0" x2="12" y2="48" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 6" marker-end="url(#arrow-dn3)"/>
+          </svg>
+        </div>
+
+        <!-- Card 4 -->
         <div class="menu-item">
-          <img src="assets/images/msc.jpg" alt="Warwick MSc">
+          <img src="assets/images/msc.jpg" alt="Consulting view">
           <div>
             <h3>Consulting View — finding the cut (prep & method)</h3>
-            <p>Curious about consulting, I volunteered at Oxbridge Analytics on sustainability work: synthesised energy-market research across 10+ engagements into decision briefs, cleaned/structured large datasets, and supported changes linked to ~20% emissions reduction. It taught me why clean data is non-negotiable.</p>
+            <p>At Oxbridge Analytics I synthesised energy‑market research across 10+ engagements into decision briefs, cleaned/structured large datasets, and supported changes linked to ~20% emissions reduction. It taught me why clean data is non‑negotiable.</p>
           </div>
         </div>
+        <div class="roadmap-connector" aria-hidden="true">
+          <svg viewBox="0 0 24 56" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow-dn4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#60a5fa"/></marker>
+            </defs>
+            <line x1="12" y1="0" x2="12" y2="48" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 6" marker-end="url(#arrow-dn4)"/>
+          </svg>
+        </div>
+
+        <!-- Card 5 -->
         <div class="menu-item">
-          <img src="assets/images/wmg.jpg" alt="WMG">
+          <img src="assets/images/wmg.jpg" alt="Impact">
           <div>
             <h3>Impact — ten even slices (repeatable outcomes)</h3>
-            <p>My north star was finance, so I earned a Nationwide Building Society internship and focused on reporting quality and controls.</p>
-
-<p>I reconciled multi-system data into Power BI and made month-end packs ~12% faster and more accurate; lifted data completeness to ~97% across 400+ records (cutting rework ~20%) and built an Excel self-check so the process stays tight next time..</p>
-
-<p>I also led a DEI/early-careers proposal rated best by leadership and briefed senior leaders on Microsoft Copilot with a controls lens.</p>
-
-
+            <p>At Nationwide Building Society: reconciled multi‑system data into Power BI to make month‑end packs ~12% faster and more accurate; raised completeness to ~97% across 400+ records (cutting rework ~20%) and added an Excel self‑check so quality persists.</p>
           </div>
         </div>
+        <div class="roadmap-connector" aria-hidden="true">
+          <svg viewBox="0 0 24 56" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow-dn5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#60a5fa"/></marker>
+            </defs>
+            <line x1="12" y1="0" x2="12" y2="48" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 6" marker-end="url(#arrow-dn5)"/>
+          </svg>
+        </div>
+
+        <!-- Card 6 -->
         <div class="menu-item">
-          <img src="assets/images/learning.jpg" alt="Continuous Learning">
+          <img src="assets/images/learning.jpg" alt="Community">
           <div>
-            <h3>Community — eyes-up rhythm (confidence from a strong team)</h3>
-            <p>Coffee chats kept surfacing the same advice: build a network, practise leadership, collaborate well. That’s why I joined Young Asians in Finance—to plan and deliver high-quality events, produce accurate materials, and uphold confidentiality while learning from people ahead of me. I’m building my network by contributing value.</p>
+            <h3>Community — eyes‑up rhythm (confidence from a strong team)</h3>
+            <p>Joined Young Asians in Finance to plan high‑quality events, produce accurate materials, and uphold confidentiality while learning from professionals ahead of me. I’m building my network by contributing value.</p>
           </div>
         </div>
       </div>
@@ -185,27 +233,26 @@ I grew up believing science was the only path. Relocating to the UK exposed me t
       <h2>Selected Projects</h2>
       <div class="menu-list">
         <div class="menu-item">
-          <img src="assets/images/project_hospital.jpg" alt="Hospital accessibility model">
+          <img src="assets/images/project_hospital.jpg" alt="Hospital model">
           <div>
             <h3>Finance</h3>
             <p class="muted">2025</p>
-            <p>Interactive Python/Streamlit model linking car‑park congestion to missed appointments and emissions; informs NHS Midlands planning.</p>
-            
+            <p>Interactive Python/Streamlit model linking congestion to missed appointments and emissions; informs NHS Midlands planning.</p>
             <div class="stack"><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Streamlit</span></div>
-          <a href="#" class="muted">Read more →</a>
+            <a href="#" class="muted">Read more →</a>
           </div>
         </div>
         <div class="menu-item">
-          <img src="assets/images/project_kpi.jpg" alt="Supplier sustainability platform">
+          <img src="assets/images/project_kpi.jpg" alt="KPI Platform">
           <div>
             <h3>Water KPI Platform</h3>
             <p class="muted">2025</p>
-            <p>Power BI + Alteryx toolkit to assess 800+ vendors against sustainability KPIs; accelerated contract reviews and reduced turnaround times.</p>
+            <p>Power BI + Alteryx toolkit to assess vendors against sustainability KPIs; accelerated reviews and reduced turnaround times.</p>
             <div class="stack"><span class="pill">Power BI</span><span class="pill">Alteryx</span><span class="pill">SQL</span></div>
-          <a href="#" class="muted">Read more →</a>
+            <a href="#" class="muted">Read more →</a>
           </div>
         </div>
-       
+      </div>
     </section>
 
     <!-- ===== 5) SKILLS & CERTIFICATIONS ===== -->
@@ -227,7 +274,7 @@ I grew up believing science was the only path. Relocating to the UK exposed me t
       </div>
       <div class="card skill-card" style="margin-top:16px">
         <h3>Certifications</h3>
-        <div class="hero-skills"><span class="pill">Meta — Data Analyst Professional Certificate</span><span class="pill">University of Illinois Urbana-Champaign (UIUC) — Mergers & Acquisitions Specialization</span><span class="pill">New York Institute of Finance (NYIF) — Risk Management Specialization/span></span><span class="pill">Howard University — Business Problem-Solving Specialization</span><span class="pill">Bloomberg Market Concepts (BMC)</span></div>
+        <div class="hero-skills"><span class="pill">Meta — Data Analyst Professional Certificate</span><span class="pill">UIUC — Mergers & Acquisitions Specialization</span><span class="pill">NYIF — Risk Management Specialization</span><span class="pill">Howard University — Business Problem‑Solving Specialization</span><span class="pill">Bloomberg Market Concepts (BMC)</span></div>
       </div>
     </section>
 
@@ -236,12 +283,12 @@ I grew up believing science was the only path. Relocating to the UK exposed me t
       <h2>Contact</h2>
       <div class="card">
         <p>Based in Solihull, UK. Open to roles across the UK and Europe.</p>
-        <p><strong>Email:</strong> <a href="mailto:saptansuneogi.sn@gmail.com">neogisanj@gmail.com</a> &nbsp;•&nbsp; <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjananeogi" target="_blank" rel="noreferrer">sanjananeogi</a> &nbsp;•&nbsp; <strong>Phone:</strong> 07503 239328</p>
+        <p><strong>Email:</strong> <a href="mailto:saptansuneogi.sn@gmail.com">saptansuneogi.sn@gmail.com</a> &nbsp;•&nbsp; <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjananeogi" target="_blank" rel="noreferrer">sanjananeogi</a> &nbsp;•&nbsp; <strong>Phone:</strong> 07503 239328</p>
       </div>
     </section>
 
     <!-- CV button anchored at the bottom of main content -->
-    <div style="text-align:center; margin:32px 0 12px;">
+    <div style="text-align:center;margin:32px 0 12px;">
       <a class="btn btn-secondary" href="assets/Saptansu_Neogi_CV.pdf" download>Download CV (PDF) ↓</a>
     </div>
   </main>
@@ -254,7 +301,7 @@ I grew up believing science was the only path. Relocating to the UK exposed me t
     document.getElementById('year').textContent = new Date().getFullYear();
     // Smooth scroll for top nav
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{ const id=a.getAttribute('href'); if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); } });
+      a.addEventListener('click', e=>{const id=a.getAttribute('href'); if(id.length>1){e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'});}});
     });
   </script>
 </body>
